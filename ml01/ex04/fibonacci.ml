@@ -1,12 +1,15 @@
 let rec fibonacci n =
-  if n = 0 then
-    0
-  else if n = 1 then
-    1
-  else if n > 1 then
-    fibonacci (n - 1) + fibonacci (n - 2)
-  else
-    -1
+  let rec loop n =
+    if n < 0 then
+      -1
+    else if n = 0 then
+      0
+    else if n = 1 then
+      1
+    else
+      loop (n - 1) + loop (n - 2)
+  in
+  loop n
 
 
 let () =
