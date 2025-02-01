@@ -8,8 +8,6 @@ let rec ft_power base exp =
 
 
 let () =
-  try
-    let base = int_of_string Sys.argv.(1) in
-    let exp = int_of_string Sys.argv.(2) in
-    ft_power base exp |> string_of_int |> print_endline
-  with _ -> print_endline "Provide the base and the exponent"
+  print_endline (string_of_int (ft_power 2 4));
+  print_endline (string_of_int (ft_power 3 0));
+  print_endline (string_of_int (ft_power 0 5))
